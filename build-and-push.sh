@@ -5,7 +5,7 @@ username="jsdidierlaurent"
 mkdir -p projects
 cd projects
 
-if [-d "${project}"]; then
+if [ ! -d "${project}" ]; then
     git clone "https://github.com/${username}/${project}.git" "${project}"
     cd "${project}"
 else
